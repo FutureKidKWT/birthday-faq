@@ -186,6 +186,9 @@ footer .social { width: 100%; display: flex; gap: 10px 18px; flex-wrap: wrap; fo
 footer .social a { color: #FFFFFF; }
 footer .moon { position: absolute; width: 130px; height: auto; inset-inline-end: 4%; top: 50%; transform: translateY(-50%); }
 @media (max-width: 720px) { footer .moon { width: 80px; top: 20px; transform: none; } }
+/* keep footer text and buttons clear of the stars, in both languages */
+@media (min-width: 721px) { footer .wrap { padding-inline-end: 190px; } }
+@media (max-width: 720px) { footer .wrap > div:first-child { padding-inline-end: 84px; } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -306,7 +309,7 @@ const T = {
     times: "مواعيد الحفلات", d1: "الأحد – الخميس", d2: "الجمعة – السبت", s3: "3–5 م", s7: "7–9 م", s11: "11 ص–1 م",
     kidsnote: "عدد الأطفال يشمل صاحب عيد الميلاد.",
     still: "عندكم سؤال آخر؟", stillsub: "راسلوا جسومي عبر واتساب، وفريقنا يساعدكم في ترتيب الحفلة.",
-    cta3: "تحدثوا مع جسومي", map: "موقعنا على خرائط جوجل", follow: "تابعونا"
+    cta3: "راسلوا جسومي", map: "شوفوا موقع الفرع على خرائط جوجل", follow: "تابعونا"
   },
   ui: {
     en: { ph: "Search: deposit, cake, times…", label: "Search questions", none: "No answers match “%s”. Try another word, or message Jasoomy on WhatsApp.", found: n => n === 1 ? "1 answer found" : n + " answers found", all: n => n + " questions · tap a question to see the answer" },
